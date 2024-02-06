@@ -3,66 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musavir's 5 ⭐ Restaurant</title>
-</head>
-<body>
-
+    <title>Cat Lovers Website</title>
     <style>
-         {
-  background-color: orange;
-}
-
-p {
-  font-family: monospace;
-}
-
-li {
-    font-style: italic;
-}
-        .left-half {
-      background-color: blue;
-      width: 50%;
-    }
-    
-    .right-half {
-      background-color: yellow;
-      width: 50%;
-    }
-  </style>
+        /* Add your CSS styles here */
+    </style>
 </head>
 <body>
-  <div class="left-half"></div>
-  <div class="right-half"></div>
-</body>
-    </style>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <h1>Musavirs</h1>
-    </header>
-
-    <section>
-        <h2>Musavir's Restaurant</h2>
-        <img src="Musu.png" width = 200 px height = 100 px>
-        <p><b>Bonjour Madam</b> Here Is The Foods Of This Restaurant Below.</p>
-        <ol>
-            <li>Feetisticly Croisant</li>
-            <li>YAH YAH Baguette</li>
-            <li>Cake, Just Plain Cake</li>
-        </ol>
-
-        <h1>Feetisticly Croissant</h1>
-        <p> It Is Rich In Flavour And It Has Vitamins Like Vitamin Hitler And Vitamin Stalin</p>
-
-        <h1>YAh YAH Baguette</h1>
-        <p>This Baguette Always Make Sound Like "YAH YAH"</p>
-
-        <h1>Cake, Just Plain Cake</h1>
-        <p>It Is Just A Normal Plain Cake Nig!</p>
+    <!-- Homepage -->
+    <section id="home">
+        <h1>Welcome to Cat Lovers' Website</h1>
+        <p>Explore the wonderful world of cats!</p>
     </section>
 
-    <footer>
-        <p>Bye Bye, Come Again Next Time.</p>
-    </footer>
+    <!-- About Page -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a group of passionate cat lovers who want to share our knowledge and love for cats with the world.</p>
+    </section>
 
+    <!-- Gallery Page -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-container">
+            <!-- Add your cat images here -->
+            <img src="cat1.jpg" alt="Cat 1">
+            <img src="cat2.jpg" alt="Cat 2">
+            <img src="cat3.jpg" alt="Cat 3">
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? Feel free to reach out to us.</p>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Cat Lovers' Website</p>
+    </footer>
 </body>
 </html>
