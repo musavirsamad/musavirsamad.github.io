@@ -28,5 +28,21 @@
         <li> Give It Water Every 1-3  Hours </li>
         <li> Whenever Its Sick Take It To The Vets </li>
     </ul>
+    <h1>Some Of Our Cat Products!</h1>
+    <div class="product">
+    <img src="cat_product.jpg" alt="Cat Product">
+    <h2>Cat Toy</h2>
+    <p>$10.99</p>
+    <button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: $<span id="total-price">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+</div>
 </body>
 </html>
