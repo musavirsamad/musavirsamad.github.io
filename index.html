@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Lovers Website</title>
     <style>
-            .planet {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                text-align: center;
-                padding: 10px;
-                position: relative;
-            }
-            .moon {
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: yellow;
+            .right-answer {
+            background: rgb(0, 255, 9);
+        }
+        
+        .wrong-answer { 
+            background: rgb(237, 28, 0);
+        }
             }
     </style>
 </head>
@@ -42,17 +35,21 @@
         <li> Give It Water Every 1-3  Hours </li>
         <li> Whenever Its Sick Take It To The Vets </li>
     </ul>
-    <script>
-         var planetEl = document.createElement("div")
-        planetEl.className = "planet";
-        planetEl.style.backgroundColor = "blue";
-        planetEl.style.left = "36%";
+    <ul id="answers">
+            <li>Mammalia</li>
+            <li>Ascidiacea</li>
+            <li>Reptilia</li>
+        </ul>
         
-        var moonEl = document.createElement("div")
-        moonEl.className = "moon";
-        moonEl.style.backgroundColor = "white"
-        moonEl.style.left = "105%";
-    </script>
+        <script>
+        var answers = document.querySelectorAll('#answers li');
+        var rightAnswer = answers[0];
+        rightAnswer.className = "right-answer";
+        var wrongAnswer1 = answers[1];
+        wrongAnswer1.className = "wrong-answer";
+        var wrongAnswer2 = answers[2];
+        wrongAnswer2.className = "wrong-answer";
+        </script>
  
 </body>
     
