@@ -12,7 +12,10 @@
         .wrong-answer { 
             background: rgb(237, 28, 0);
         }
-            }
+        .medium-answer {
+            background: rgb(0, 255, 9);
+        }
+            
     </style>
 </head>
 <body>
@@ -35,12 +38,18 @@
         <li> Give It Water Every 1-3  Hours </li>
         <li> Whenever Its Sick Take It To The Vets </li>
     </ul>
+     <h2>Musavirs Quiz: Who Is A Supporter Of Israel In Between These Three</h2>
     <ul id="answers">
-            <li>Mammalia</li>
-            <li>Ascidiacea</li>
-            <li>Reptilia</li>
+            <li>McDonals</li>
+            <li>Pak Cream</li>
+            <li>Gojo Saturo</li>
         </ul>
-        
+        <h2>Musavirs Quiz: Who Eats Burger</h2>
+    <ul id="answers">
+            <li>Pak</li>
+            <li>Ind</li>
+            <li>USA</li>
+        </ul>
         <script>
         var answers = document.querySelectorAll('#answers li');
         var rightAnswer = answers[0];
@@ -48,7 +57,7 @@
         var wrongAnswer1 = answers[1];
         wrongAnswer1.className = "wrong-answer";
         var wrongAnswer2 = answers[2];
-        wrongAnswer2.className = "wrong-answer";
+        wrongAnswer2.className = "wrong-answer";  
         </script>
  
 </body>
