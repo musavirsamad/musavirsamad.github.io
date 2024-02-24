@@ -84,9 +84,11 @@
     <span id="meritatti"></span>
     </p>
         <script>
-           function wahaj() {
+          function wahaj() {
         var element = document.getElementById("musu");
-        element.innerHTML = element.innerHTML.replace("My Name Is Chiki", "<span style='color: rgb(0,144,14)'>My Name Is Chiki</span>");
+        var newText = "My Name Is Chiki";
+        var styledText = "<span style='color: rgb(0,144,14)'>" + newText + "</span>";
+        element.innerHTML = element.innerHTML.replace(newText, styledText);
     }
              var libButton = document.getElementById('lib-button');
         var libIt = function() {
