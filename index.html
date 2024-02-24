@@ -25,7 +25,7 @@
             background: rgb(0, 255, 9);
 
         }
-        .musu {
+        #musu {
             background: rgb(0,144,6);
         }
             
@@ -84,12 +84,9 @@
     <span id="meritatti"></span>
     </p>
         <script>
-          function wahaj() {
-        var element = document.getElementById("musu");
-        var newText = "My Name Is Chiki";
-        var styledText = "<span style='color: rgb(0,144,14)'>" + newText + "</span>";
-        element.innerHTML = element.innerHTML.replace(newText, styledText);
-    }
+       function wahaj() {
+  document.getElementById("musu").innerHTML = "Hello World";
+}
              var libButton = document.getElementById('lib-button');
         var libIt = function() {
             var meritattiDiv = document.getElementById("meritatti");
