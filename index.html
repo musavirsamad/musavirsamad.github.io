@@ -50,7 +50,18 @@
             <li>Ind</li>
             <li>USA</li>
         </ul>
+    <img id="cat-pic" src="https://www.kasandbox.org/programming-images/animals/thumbs/cat.png">
+        <br>
+        
+        <div id="cat-chat"></div>
         <script>
+            var catEl = document.getElementById("cat-pic");
+        var onCatClick = function () {
+            var sayEl = document.getElementById("cat-chat");
+            sayEl.textContent = "meow";
+        };
+        catEl.addEventListener('click', onCatClick)
+        
         var answers = document.querySelectorAll('#answers li');
         var rightAnswer = answers[0];
         rightAnswer.className = "right-answer";
