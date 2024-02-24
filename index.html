@@ -54,7 +54,33 @@
         <br>
         
         <div id="cat-chat"></div>
+
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+    </ul>
+     
+    <button id="lib-button">click me!</button>
+      
+    <p>Generated story: 
+    <span id="meritatti"></span>
+    </p>
         <script>
+             var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+            var meritattiDiv = document.getElementById("story");
+            var noun = document.getElementById("noun").value;
+            var adjective = document.getElementById("adjective").value;
+            
+            var person = document.getElementById("person").value;
+            
+            
+            
+            meritattiDiv.innerHTML = "as the" + noun + "get closer to being" + adjective + "" + person + "need to be careful."
+        };
+        libButton.addEventListener('click', libIt);
+        
             var catEl = document.getElementById("cat-pic");
         var onCatClick = function () {
             var sayEl = document.getElementById("cat-chat");
