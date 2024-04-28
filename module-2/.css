@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Menu</title>
+  
+</head>
+<body>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .menu-item {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: inline-block;
+      width: calc(33.33% - 20px); /* 33.33% width with margin between items */
+      box-sizing: border-box;
+      vertical-align: top; /* Align items at the top */
+    }
+    .item-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .item-description {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+<div class="container">
+  <div class="menu-item">
+    <div class="item-name">Dragon's Breath Burger</div>
+    <div class="item-description">A fiery burger that will test your courage! Flame-grilled beef patty topped with spicy jalapenos, pepper jack cheese, and a secret hot sauce, served with crispy onion rings and dragonfire fries.</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-name">Wizard's Wand Pasta</div>
+    <div class="item-description">Cast a spell on your taste buds with this magical pasta dish! Al dente spaghetti tossed in a creamy garlic parmesan sauce, accompanied by enchanted meatballs and mystical herbs.</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-name">Elf's Delight Dessert Platter</div>
+    <div class="item-description">Embark on a sweet adventure with our dessert platter fit for an elf! Savor the flavors of elven apple pie, enchanted chocolate truffles, and fairy dusted sugar cookies, served with a side of rainbow sherbet.</div>
+  </div>
+</div>
+
+</body>
+</html>
