@@ -1,214 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Bites - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    </style>
-</head>
-<body>
-    <style>
-         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        /* Your existing CSS styles... */
-
-        .dish {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .dish:hover {
-            transform: translateY(-5px);
-        }
-
-        .dish img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .dish h3 {
-            margin-top: 10px;
-            color: #333;
-        }
-
-        .dish p {
-            color: #777;
-        }
-
-        .menu {
-            display: flex;
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .menu-item {
-            flex: 0 0 auto;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #343a40;
-            color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .menu-item:last-child {
-            margin-right: 0;
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .menu-item h3 {
-            margin-bottom: 10px;
-            color: #ffc107;
-        }
-
-        .menu-item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu-item ul li {
-            margin-bottom: 5px;
-        }
-        /* Additional CSS for enhanced styling */
-
-.dish {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Menu Mockup</title>
+<style>
+  /* Basic styling for the menu */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .menu {
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.dish:hover {
-    transform: translateY(-5px);
-}
-
-.dish img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.dish h3 {
-    margin-top: 10px;
-    color: #333;
-}
-
-.dish p {
-    color: #777;
-}
-
-.menu {
-    display: flex;
-    overflow-x: auto;
-    padding: 20px 0;
-}
-
-.menu-item {
-    flex: 0 0 auto;
+  }
+  .menu-item {
+    border: 15px solid #242121;
     padding: 20px;
-    border-radius: 10px;
-    background-color: #343a40;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.menu-item:last-child {
-    margin-right: 0;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-}
-
-.menu-item h3 {
-    margin-bottom: 10px;
-    color: #ffc107;
-}
-
-.menu-item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.menu-item ul li {
-    margin-bottom: 5px;
-}
-
-
-    </style>
-<header>
-    <!-- Your existing header content... -->
-</header>
-
-<section class="hero">
-    <!-- Your existing hero section content... -->
-</section>
-
-<section class="featured">
-    <div class="container">
-        <h2>Featured Dishes</h2>
-        <div class="grid" id="featured-dishes">
-            <!-- Featured dishes will be added here dynamically using JavaScript -->
-        </div>
+    margin-bottom: 20px;
+  }
+  .navbar-brand {
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navbar-toggle {
+    background-color: transparent;
+    border: none;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #000;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin-top: 4px;
+  }
+  .dropdown-menu li a {
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">NEW YORK, LLC</a>
     </div>
-</section>
-
-<section class="scrollable-menu">
-    <div class="container">
-        <h2>Our Menu</h2>
-        <div class="menu">
-            <div class="menu-item">
-                <h3>Starters</h3>
-                <ul>
-                    <li>Salad</li>
-                    <li>Soup</li>
-                </ul>
-            </div>
-            <div class="menu-item">
-                <h3>Main Course</h3>
-                <ul>
-                    <li>Pasta</li>
-                    <li>Steak</li>
-                </ul>
-            </div>
-            <div class="menu-item">
-                <h3>Desserts</h3>
-                <ul>
-                    <li>Cake</li>
-                    <li>Ice Cream</li>
-                </ul>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Chicken</a></li>
+            <li><a href="#">Beef</a></li>
+            <li><a href="#">Sushi</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-</section>
+  </div>
+</nav>
 
-<footer>
-    <!-- Your existing footer content... -->
-</footer>
-
-<script>
-    // JavaScript for dynamically adding featured dishes (same as before)...
-</script>
+<div class="menu">
+  <h1>Menu</h1>
+  <div class="menu-item">
+    <h2>Chicken</h2>
+    <p>The Chicken Wicken Is HOOODY GOODY</p>
+  </div>
+</div>
 
 </body>
 </html>
