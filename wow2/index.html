@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Photo Gallery</title>
+    <style>
+        #image {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            background-size: cover;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 300px;
+            font-size: 24px;
+            color: black;
+        }
+
+        .preview {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-to-content">Skip to Main Content</a>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main-content">
-        <h1>Welcome to My Website</h1>
-        <p>This is the home page.</p>
-        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ6haNWHW9LKC4D2KbLVkU06UBg4gMxOJ4hxz1arrCCwIBW-g9drfHZ1MQJT-gfznGFy288GC_0jwv_iYk" alt="Image 1">
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+    <h1>Interactive Photo Gallery</h1>
+    <div id="image">Hover over an image below to display here.</div>
+    <div>
+        <img class="preview" src="image1.jpg" alt="Description 1" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img class="preview" src="image2.jpg" alt="Description 2" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img class="preview" src="image3.jpg" alt="Description 3" onmouseover="upDate(this)" onmouseout="unDo()">
+        <!-- Add more images as needed -->
+    </div>
+
+    <script src="gallery.js"></script>
 </body>
 </html>
