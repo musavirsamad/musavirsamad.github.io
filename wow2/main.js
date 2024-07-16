@@ -1,13 +1,14 @@
 function upDate(previewPic) {
-    // Change the background image of the div with the id of image
-    document.getElementById('image').style.backgroundImage = "url('" + previewPic.src + "')";
-    // Change the text of the div with the id of image
-    document.getElementById('image').innerHTML = previewPic.alt;
+    const imageElement = document.getElementById('image');
+    const newSrc = previewPic.src ? `url('${previewPic.src}')` : '';
+
+    imageElement.style.backgroundImage = newSrc;
+    imageElement.innerHTML = previewPic.alt || '';
 }
 
 function unDo() {
-    // Update the background image of the div with the id of image back to the original
-    document.getElementById('image').style.backgroundImage = "url('')";
-    // Update the text of the div with the id of image back to the original text
-    document.getElementById('image').innerHTML = "Hover over an image below to display here.";
+    const imageElement = document.getElementById('image');
+
+    imageElement.style.backgroundImage = "url('')";
+    imageElement.innerHTML = "Hover over an image below to display here.";
 }
