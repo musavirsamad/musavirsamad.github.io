@@ -1,14 +1,33 @@
-function upDate(previewPic) {
-    const imageElement = document.getElementById('image');
-    const newSrc = previewPic.src ? `url('${previewPic.src}')` : '';
+        // JavaScript code to add interactivity
+        window.onload = function() {
+            const figures = document.querySelectorAll('.gallery figure');
+            const largeImage = document.getElementById('largeImage');
+            const imageDescription = document.getElementById('imageDescription');
 
-    imageElement.style.backgroundImage = newSrc;
-    imageElement.innerHTML = previewPic.alt || '';
-}
+            figures.forEach((figure, index) => {
+                const img = figure.querySelector('img');
+                img.tabIndex = 0; // Add tabindex for keyboard access
 
-function unDo() {
-    const imageElement = document.getElementById('image');
+                img.onmouseover = function() {
+                    largeImage.style.backgroundImage = `url(${img.src})`;
+                    imageDescription.textContent = img.alt;
+                };
 
-    imageElement.style.backgroundImage = "url('')";
-    imageElement.innerHTML = "Hover over an image below to display here.";
-}
+                img.onmouseleave = function() {
+                    largeImage.style.backgroundImage = '';
+                    imageDescription.textContent = 'Hover over an image to see the description here.';
+                };
+
+                img.onfocus = function() {
+                    largeImage.style.backgroundImage = `url(${img.src})`;
+                    imageDescription.textContent = img.alt;
+                };
+
+                img.onblur = function() {
+                    largeImage.style.backgroundImage = '';
+                    imageDescription.textContent = 'Hover over an image to see the description here.';
+                };
+            });
+
+            console.log("Event listeners added, and tabindex attributes set.");
+        };
