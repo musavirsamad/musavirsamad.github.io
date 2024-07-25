@@ -1,1 +1,97 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+figure {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure figcaption {
+    margin-top: 10px;
+}
+
+/* Tablet View */
+@media (min-width: 772px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    figure img {
+        border-radius: 50%;
+    }
+
+    figure:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* Large Screen View */
+@media (min-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure {
+        border-radius: 0;
+    }
+
+    figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #ddd;
+    }
+
+    figure {
+        background-color: #444;
+        color: #ff0;
+        border-color: #000;
+    }
+}
 
